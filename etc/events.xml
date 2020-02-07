@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+
+    <event name="sales_quote_address_save_after">
+        <observer name="web4pro_quote_address_save" instance="Web4Pro\AddressAttribute\Observer\QuoteAddressObserver" shared="false"/>
+    </event>
+
+    <event name="sales_order_address_save_after">
+        <observer name="web4pro_order_address_save" instance="Web4Pro\AddressAttribute\Observer\OrderAddressObserver" shared="false"/>
+    </event>
+
+</config>

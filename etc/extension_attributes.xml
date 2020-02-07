@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"    xsi:noNamespaceSchemaLocation="urn:magento:framework:Api/etc/extension_attributes.xsd">
+    <extension_attributes for="Magento\Quote\Api\Data\AddressInterface">
+        <attribute code="my_address_type" type="int" >
+            <join reference_table="web4pro_quote_address_table" reference_field="address_id" join_on_field="address_id">
+                <field>type</field>
+            </join>
+        </attribute>
+    </extension_attributes>
+    <extension_attributes for="Magento\Sales\Api\Data\OrderAddressInterface">
+        <attribute code="my_address_type" type="int">
+            <join reference_table="web4pro_order_address_table" join_on_field="entity_id" reference_field="entity_id">
+                <field>type</field>
+            </join>
+        </attribute>
+    </extension_attributes>
+</config>
