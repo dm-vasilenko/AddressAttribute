@@ -3,15 +3,18 @@
     <extension_attributes for="Magento\Quote\Api\Data\AddressInterface">
         <attribute code="my_address_type" type="int" >
             <join reference_table="web4pro_quote_address_table" reference_field="address_id" join_on_field="address_id">
-                <field>type</field>
+                <field>my_address_type</field>
             </join>
         </attribute>
     </extension_attributes>
     <extension_attributes for="Magento\Sales\Api\Data\OrderAddressInterface">
         <attribute code="my_address_type" type="int">
             <join reference_table="web4pro_order_address_table" join_on_field="entity_id" reference_field="entity_id">
-                <field>type</field>
+                <field>my_address_type</field>
             </join>
         </attribute>
+    </extension_attributes>
+    <extension_attributes for="Magento\Customer\Api\Data\AddressInterface">
+        <attribute code="my_address_type" type="int"/>
     </extension_attributes>
 </config>

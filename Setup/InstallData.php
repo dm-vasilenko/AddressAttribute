@@ -61,7 +61,7 @@ class InstallData implements InstallDataInterface
 
         $customAttribute->setData(
             'used_in_forms',
-            ['adminhtml_customer_address','customer_address_edit','customer_register_address'] //list of forms where you want to display the custom attribute
+            ['adminhtml_customer_address','customer_address_edit','customer_register_address', 'customer_address_create'] //list of forms where you want to display the custom attribute
         );
         $customAttribute->save();
 

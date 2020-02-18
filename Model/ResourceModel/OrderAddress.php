@@ -6,10 +6,8 @@ use Magento\Framework\Model\ResourceModel\Db\AbstractDb;
 
 class OrderAddress extends AbstractDb
 {
+    protected $_isPkAutoIncrement = false;
 
-    /**
-     * @inheritDoc
-     */
     protected function _construct()
     {
         $this->_init('web4pro_order_address_table', 'entity_id');

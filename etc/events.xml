@@ -4,11 +4,18 @@
         xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
 
     <event name="sales_quote_address_save_after">
-        <observer name="web4pro_quote_address_save" instance="Web4Pro\AddressAttribute\Observer\QuoteAddressObserver" shared="false"/>
+        <observer name="web4pro_quote_address_save" instance="Web4Pro\AddressAttribute\Observer\QuoteAddressObserver" />
     </event>
 
     <event name="sales_order_address_save_after">
-        <observer name="web4pro_order_address_save" instance="Web4Pro\AddressAttribute\Observer\OrderAddressObserver" shared="false"/>
+        <observer name="web4pro_order_address_save" instance="Web4Pro\AddressAttribute\Observer\Order\OrderAddressObserver" />
     </event>
 
+    <event name="sales_quote_address_collection_load_before">
+        <observer name="web4pro_sales_quote_address_collection_load_before" instance="Web4Pro\AddressAttribute\Observer\QuoteAddressCollectionLoad" shared="false" />
+    </event>
+
+    <event name="sales_order_address_collection_load_before">
+        <observer name="web4pro_sales_order_address_collection_load_before" instance="Web4Pro\AddressAttribute\Observer\Order\OrderAddressCollectionLoad" shared="false" />
+    </event>
 </config>

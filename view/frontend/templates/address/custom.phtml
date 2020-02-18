@@ -1,0 +1,18 @@
+<?php /** @var \Web4Pro\AddressAttribute\Block\Customer\Address\FormEditCustom $block */ ?>
+<div class="field custom<?php if ($block->isRequired()) {
+    echo ' required';
+} ?>">
+    <label class="label">
+        <span><?php echo $block->escapeHtml($block->getFieldLabel());?></span>
+    </label>
+    <div class="control">
+        <select
+        id="my_address_type"
+        name="my_address_type"
+        class="my-select">
+            <option value="1" label="Residence"<?php if ($block->getSelectedValue() == 1) echo 'selected'?>>Residence</option>
+            <option value="2" label="Business"<?php if ($block->getSelectedValue() == 2) echo 'selected'?>>Business</option>
+        </select>
+    </div>
+</div>
+
